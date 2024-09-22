@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:pages": "npx @cloudflare/next-on-pages",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "yarn build:pages && wrangler pages deploy --branch develop",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "nextjs-toploader": "^3.6.15",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.3",
+    "@cloudflare/workers-types": "^4.20240919.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5",
+    "vercel": "^37.5.3",
+    "wrangler": "^3.78.7"
+  }
+}
