@@ -12,6 +12,10 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "framer-motion": "^11.5.6",
     "next": "14.2.5",
     "nextjs-toploader": "^3.6.15",
     "react": "^18",
