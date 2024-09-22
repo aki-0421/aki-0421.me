@@ -9,7 +9,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Run Install
+        run: yarn
+      - name: Run Build
+        run: yarn build:pages
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
