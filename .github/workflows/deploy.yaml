@@ -19,8 +19,8 @@ jobs:
         run: yarn
       - name: Run Build
         run: yarn build:pages
-      - name: Deploy
-        uses: cloudflare/wrangler-action@v3
+      - name: Publish
+        uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
