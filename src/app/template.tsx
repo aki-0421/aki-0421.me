@@ -1,5 +1,6 @@
 'use client';
 
+import { Navigation } from '@/app/navigation';
 import theme from '@/theme';
 import { CacheProvider } from '@chakra-ui/next-js';
 import {
@@ -20,6 +21,7 @@ export default function Template({ children }: TemplateProps): ReactElement {
       <CacheProvider>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <ChakraProvider theme={theme}>
+          <Navigation />
           <Container>{children}</Container>
         </ChakraProvider>
       </CacheProvider>
