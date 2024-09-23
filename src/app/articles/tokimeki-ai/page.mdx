@@ -1,0 +1,72 @@
+# tokimeki.ai 【2023/08】
+
+（現在は稼働していません）
+
+## どのようなアプリか
+
+線画の画像を入力すると、AIが下塗りをしたPSDを作成するWebアプリ
+
+## 作ろうと思った理由
+
+2022年に画像生成AIが普及したものの、製作の過程で直接役に立つ技術ではなかった。
+
+そのため、イラスト製作の工程の中で自動化できそうな工程をAIにまかせる方法を考えてみたかった。
+
+原案: <Link href="https://github.com/mattyamonaca/auto_undercoat">mattyamonaca/auto_undercoat</Link>
+
+## スクリーンショット
+
+現在は動作していないので、実際の利用を想定したスクリーンショットで代用します。
+
+<Image src="/articles/tokimeki-ai/1.png" />
+
+↑ トップページです。
+
+<Image src="/articles/tokimeki-ai/2.png" />
+
+↑ 下塗りの一覧から新規作成できます。
+
+<Image src="/articles/tokimeki-ai/3.png" />
+
+↑ 下塗りの作成画面です。塗りたい線画を入力します。
+
+<Image src="/articles/tokimeki-ai/4.png" />
+
+↑ プロンプトの入力欄です。ここで色などをなんとなく操作できます。
+
+<Image src="/articles/tokimeki-ai/5.png" />
+
+↑ 下塗りのジョブを作成した後の画面です。
+
+<Image src="/articles/tokimeki-ai/6.png" />
+
+↑ 下塗りが完了したら画面が更新されます。
+
+## 課題に思った点
+
+（サービスを止めてしまった理由などを追記します。）
+
+## 構成
+
+- **フロントエンド**
+    - Webアプリ
+        - Next.js(App Router)
+        - Chakra UI
+            - デフォルトのUIが美しい
+            - テーマを作成できるためコードを簡潔にできる
+        - Framer Motion
+            - コンポーネントにアニメーションを追加するため
+- **バックエンド**
+    - APIサーバー
+        - Golang
+    - AIでの画像処理用サーバー
+        - Python
+- **サーバー**
+    - Google Cloud Platform
+        - Cloud Run
+            - WebアプリとAPIサーバーを動かすために利用した
+    - Runpod.io
+        - AIでの処理にGPUサーバーが必要なため
+        - 利用した時間のみ1秒単位で課金のため使いやすい
+    
+
