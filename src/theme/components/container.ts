@@ -5,7 +5,7 @@ const baseStyle = defineStyle({
   mx: 'auto',
   maxW: '768px',
   px: { base: '16px', lg: '32px' },
-  py: { base: 8, lg: 8 },
+  my: { base: 8, lg: 8 },
 });
 
 export const containerTheme = defineStyleConfig({

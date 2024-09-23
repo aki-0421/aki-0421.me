@@ -1,5 +1,6 @@
 import {
   Heading,
+  Image,
   Link,
   ListItem,
   OrderedList,
@@ -12,7 +13,7 @@ import type { ReactElement } from 'react';
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: (props: any): ReactElement => (
-      <Heading my={4} fontSize="1.6em" color="font.heading" {...props} />
+      <Heading my={8} fontSize="1.8em" color="font.heading" {...props} />
     ),
     h2: (props: any): ReactElement => (
       <Heading my={4} fontSize="1.4em" color="font.heading" {...props} />
@@ -36,6 +37,19 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         href={href}
         color="accent.pink"
         _hover={{ textDecoration: 'none', opacity: 0.8 }}
+        {...props}
+      />
+    ),
+    Image: ({ src, ...props }): ReactElement => (
+      <Image
+        src={src}
+        m={4}
+        w="100%"
+        userSelect="none"
+        pointerEvents="none"
+        border="1px"
+        borderColor="border"
+        borderRadius="8px"
         {...props}
       />
     ),
