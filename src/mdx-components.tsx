@@ -1,4 +1,5 @@
 import {
+  Box,
   Heading,
   Image,
   Link,
@@ -41,17 +42,18 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       />
     ),
     Image: ({ src, ...props }): ReactElement => (
-      <Image
-        src={src}
-        m={4}
-        w="100%"
-        userSelect="none"
-        pointerEvents="none"
-        border="1px"
-        borderColor="border"
-        borderRadius="8px"
-        {...props}
-      />
+      <Box p={4}>
+        <Image
+          src={src}
+          w="100%"
+          userSelect="none"
+          pointerEvents="none"
+          border="1px"
+          borderColor="border"
+          borderRadius="8px"
+          {...props}
+        />
+      </Box>
     ),
     ...components,
   };
