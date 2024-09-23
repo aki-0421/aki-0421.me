@@ -29,7 +29,7 @@ const semanticTokens = {
       _dark: 'hsl(360 90% 85%)',
     },
     'accent.pink': {
-      _light: 'hsl(360 100% 85%)',
+      _light: '#EF96AA',
       _dark: 'hsl(360 90% 85%)',
     },
   },
