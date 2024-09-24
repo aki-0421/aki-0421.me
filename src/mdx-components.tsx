@@ -13,11 +13,47 @@ import type { ReactElement } from 'react';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
+    Header: (props: any): ReactElement => <Box my={24} {...props}></Box>,
+    Title: (props: any): ReactElement => (
+      <Heading
+        my={4}
+        fontSize={['1.8em', '2.4em']}
+        color="font.heading"
+        textAlign="center"
+        {...props}
+      />
+    ),
+    SubTitle: (props: any): ReactElement => (
+      <Heading
+        my={4}
+        fontSize={['1em', '1.2em']}
+        color="font.heading"
+        textAlign="center"
+        opacity={0.6}
+        {...props}
+      />
+    ),
     h1: (props: any): ReactElement => (
-      <Heading my={8} fontSize="1.8em" color="font.heading" {...props} />
+      <Heading
+        mt={[8, 12]}
+        mb={[6, 8]}
+        pb={2}
+        fontSize={['1.8em', '2.4em']}
+        color="font.heading"
+        {...props}
+      />
     ),
     h2: (props: any): ReactElement => (
-      <Heading my={4} fontSize="1.4em" color="font.heading" {...props} />
+      <Heading
+        mt={8}
+        mb={6}
+        pb={2}
+        fontSize={['1.3em', '1.4em']}
+        color="font.heading"
+        borderBottom="1px"
+        borderColor="border"
+        {...props}
+      />
     ),
     p: (props: any): ReactElement => <Text lineHeight={1.7} {...props} />,
     ul: (props: any): ReactElement => (
@@ -42,18 +78,17 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       />
     ),
     Image: ({ src, ...props }): ReactElement => (
-      <Box p={4}>
-        <Image
-          src={src}
-          w="100%"
-          userSelect="none"
-          pointerEvents="none"
-          border="1px"
-          borderColor="border"
-          borderRadius="8px"
-          {...props}
-        />
-      </Box>
+      <Image
+        my={4}
+        src={src}
+        w="100%"
+        userSelect="none"
+        pointerEvents="none"
+        border="1px"
+        borderColor="border"
+        borderRadius="8px"
+        {...props}
+      />
     ),
     ...components,
   };
