@@ -4,6 +4,10 @@ import type { ReactElement, ReactNode } from 'react';
 
 export const metadata: Metadata = {
   title: `Aki's portfolio`,
+  metadataBase:
+    process.env.NODE_ENV === 'production'
+      ? new URL('https://aki-0421.me')
+      : undefined,
 };
 
 type RootLayoutProps = {
