@@ -1,7 +1,7 @@
 'use client';
 
 import { Link } from '@chakra-ui/next-js';
-import { Box, Container, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Container, Flex, Heading, Image } from '@chakra-ui/react';
 
 import type { ReactElement } from 'react';
 
@@ -10,7 +10,7 @@ export function Navigation(): ReactElement {
     <Flex
       zIndex={10}
       w="full"
-      h="56px"
+      h="96px"
       align="center"
       justify="space-between"
       borderBottom="1px"
@@ -30,13 +30,13 @@ export function Navigation(): ReactElement {
               <Flex align="center" gap={2}>
                 <Image
                   src="/profile.png"
-                  boxSize="36px"
+                  boxSize="48px"
                   border="1px"
                   borderColor="border"
                   borderRadius="50%"
                 />
                 <Heading fontSize="1em" color="font.heading">
-                  Portfolio
+                  Portfolio / あき
                 </Heading>
               </Flex>
             </Link>
