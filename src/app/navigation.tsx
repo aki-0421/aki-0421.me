@@ -10,7 +10,7 @@ export function Navigation(): ReactElement {
     <Flex
       zIndex={10}
       w="full"
-      h="96px"
+      h="80px"
       align="center"
       justify="space-between"
       borderBottom="1px"
@@ -27,7 +27,7 @@ export function Navigation(): ReactElement {
                 opacity: 0.8,
               }}
             >
-              <Flex align="center" gap={2}>
+              <Flex align="center" gap={4}>
                 <Image
                   src="/profile.png"
                   boxSize="48px"

@@ -13,31 +13,10 @@ import type { ReactElement } from 'react';
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    Header: (props: any): ReactElement => <Box my={24} {...props}></Box>,
-    Title: (props: any): ReactElement => (
-      <Heading
-        my={4}
-        fontSize={['1.8em', '2.4em']}
-        color="font.heading"
-        textAlign="center"
-        {...props}
-      />
-    ),
-    SubTitle: (props: any): ReactElement => (
-      <Heading
-        my={4}
-        fontSize={['1em', '1.2em']}
-        color="font.heading"
-        textAlign="center"
-        opacity={0.6}
-        {...props}
-      />
-    ),
     h1: (props: any): ReactElement => (
       <Heading
-        mt={[8, 12]}
+        mt={[12, 12]}
         mb={[6, 8]}
-        pb={2}
         fontSize={['1.8em', '2.4em']}
         color="font.heading"
         {...props}
@@ -45,8 +24,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     h2: (props: any): ReactElement => (
       <Heading
-        mt={8}
-        mb={6}
+        mt={[6, 8]}
+        mb={[4, 6]}
         pb={2}
         fontSize={['1.3em', '1.4em']}
         color="font.heading"
