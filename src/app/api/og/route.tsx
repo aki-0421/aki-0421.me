@@ -54,6 +54,7 @@ export async function GET(req: NextRequest) {
       >
         <div
           style={{
+            marginTop: '-32px',
             display: 'flex',
             flexDirection: 'column',
           }}
@@ -63,6 +64,7 @@ export async function GET(req: NextRequest) {
               fontFamily: 'Noto Sans JP',
               fontSize: '96px',
               color: 'hsl(0 0% 25%)',
+              lineHeight: 1.1,
             }}
           >
             {req.nextUrl.searchParams.get('title')}
@@ -91,7 +93,7 @@ export async function GET(req: NextRequest) {
             src={`${origin}/profile.png`}
             style={{
               height: '96px',
-              border: '1px',
+              border: '2px',
               borderRadius: '50%',
               borderColor: 'hsl(0 0% 92%)',
             }}
@@ -99,8 +101,9 @@ export async function GET(req: NextRequest) {
           <h2
             style={{
               fontFamily: 'Noto Sans JP',
-              fontSize: '32px',
+              fontSize: '36px',
               color: 'hsl(0 0% 55%)',
+              lineHeight: 1,
             }}
           >
             @aki__0421
